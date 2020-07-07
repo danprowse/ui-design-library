@@ -37,7 +37,11 @@ body {
 }
 
 /* Form Styles */
-
+#name-input {
+    border: none;
+    border: 1px solid white;
+    border-radius: 5px;
+}
 
 
 table {
