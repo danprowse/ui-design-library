@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+body {
+    background-color: #f7f8fc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 940px;
+    margin: auto;
+}
+h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 300px;
+    transition: .3s box-shadow, .3s margin-top ease-in-out;
+    height: 500px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px 20px 20px;
+    min-height: 200px;
+}
+.card-body h2 {
+    margin: 0 5px 10px;
+}
+.card-body p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    margin: 0 0 30px;
+}
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-footer {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+}
+.card:hover {
+    box-shadow: 2px 12px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Author */
+.author-name {
+    font-weight: 600;
+    margin: 0;
+}
+
+.author-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.job-title {
+   color: #888785
+}
+.author-info {
+    width: 100%;
+}
+.post-date {
+    float: right;
+    color: #888785
+}
+
+/* Media Q. */
+@media (max-width: 940px) {
+
+    /* single col */
+    .container {
+        grid-template-columns: 1fr;
+        justify-items: center   ;
+    }
+    .container:first-child {
+        margin-top: 50px;
+    }
+}
