@@ -106,6 +106,8 @@ table tbody tr.priority-600 td .fa-circle {
     transform: scale(0.5);
     color: #40c587;
 }
+
+/* Delete button styles */
 .delete {
     cursor: pointer;
     background-color: #242c4c;
@@ -116,8 +118,14 @@ table tbody tr.priority-600 td .fa-circle {
     padding: 5px 10px;
     opacity: 0;
 }
-table tbody tr:hover .delete {
-    opacity: 1;
+.delete:hover {
+    background-color: rgba(144, 144, 144, 0.5);
+}
+.delete:active {
+    transform: scale(0.95);
+}
+.delete:focus {
+    outline: none;
 }
 
 @media(max-width:768px) {
