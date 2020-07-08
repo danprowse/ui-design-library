@@ -41,8 +41,15 @@ body {
     border: none;
     border: 1px solid white;
     border-radius: 5px;
+    padding: 5px 10px;
 }
-
+.icon-search {
+    padding-right: 5px;
+    color: grey;
+}
+/* #name-input:active, #name-input:focus {
+    font-family: 'Source Sans Pro', sans-serif;
+} */
 
 table {
     color: #e2e2e2;

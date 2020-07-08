@@ -66,9 +66,10 @@ class UI {
     }
 }
 
-// TODO:
-// implement search filter
+// TODO: implement search filter
 
+
+// TODO: implement delete?
 
 // Event: display books
 document.addEventListener('DOMContentLoaded', UI.displayAds);
