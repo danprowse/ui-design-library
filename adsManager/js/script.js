@@ -1,13 +1,3 @@
-// Advert Class
-class Advert {
-    constructor(name, clicks, priority, impressions) {
-        this.name = name;
-        this.clicks = clicks;
-        this.priority = priority;
-        this.impressions = impressions;
-    }
-}
-
 // UI Class
 class UI {
     static displayAds() {
@@ -44,10 +34,8 @@ function findMatches(wordToMatch, storedAds) {
   }
   
   function displayMatches() {
-    // console.log(this.value);
     const matchArray = findMatches(this.value, storedAds);
     const tbody = document.getElementById('ad-list');
-    // console.log(matchArray);
     const html = matchArray.map(ad => {
         return `
         <tr class="priority-${ad.priority}">
@@ -64,39 +52,56 @@ function findMatches(wordToMatch, storedAds) {
 
 // Event: display books
 document.addEventListener('DOMContentLoaded', UI.displayAds);
-
 const searchInput = document.getElementById('search');
 searchInput.addEventListener('keyup', displayMatches);
 
 const storedAds = [
     {
-        name: 'Shure SE110 in-ear headphones',
+        name: 'Turtle Beach Headset',
         clicks: 857,
         priority: 200,
         impressions: 190
     },
     {
-        name: 'Our favourite iPhone solution',
+        name: 'Xbox Charging Docking Station',
         clicks: 620,
         priority: 600,
         impressions: 478
     },
     {
-        name: 'Audio jack for connecting to your own headphones',
+        name: 'Keyboard + Mouse + Headphones Combo Set',
         clicks: 500,
         priority: 300,
         impressions: 322
     },
     {
-        name: 'Memory-foam tips',
+        name: 'Zoostorm Gaming Chair',
         clicks: 420,
         priority: 200,
         impressions: 197
     },
     {
-        name: 'Cables over the tops',
+        name: 'PS4 Controller',
         clicks: 170,
         priority: 300,
         impressions: 289
+    },
+    {
+        name: '24" LG Monitor',
+        clicks: 743,
+        priority: 600,
+        impressions: 412
+    },
+    {
+        name: 'PC Cleaning Kit',
+        clicks: 89,
+        priority: 300,
+        impressions: 119
+    },
+    {
+        name: 'XPS 15 9th Generation - Core i7',
+        clicks: 388,
+        priority: 200,
+        impressions: 293
     }
 ];

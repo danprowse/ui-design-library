@@ -31,7 +31,7 @@ body {
     background-color: #273348;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
-    padding: 100px;
+    padding: 10px;
     margin: auto;
     width: 1000px;
 }
@@ -112,7 +112,6 @@ table tbody tr.priority-600 td .fa-circle {
     color: #909090;
     font-size: 16px;
     padding: 5px 10px;
-    opacity: 0;
 }
 .delete:hover {
     background-color: rgba(144, 144, 144, 0.5);
