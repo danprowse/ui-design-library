@@ -35,12 +35,39 @@ class UI {
 }
 
 // TODO: implement search filter
-
-
-// TODO: implement delete?
+function findMatches(wordToMatch, storedAds) {
+    return storedAds.filter(ad => {
+      //if city of state matches what was searched.
+      const reg = new RegExp(wordToMatch, 'gi');
+      return ad.name.match(reg);
+    });
+  }
+  
+  function displayMatches() {
+    // console.log(this.value);
+    const matchArray = findMatches(this.value, storedAds);
+    const tbody = document.getElementById('ad-list');
+    // console.log(matchArray);
+    const html = matchArray.map(ad => {
+        return `
+        <tr class="priority-${ad.priority}">
+            <td>${ad.name}</td>
+            <td>${ad.clicks}</td>
+            <td><i class="fas fa-circle"></i>${ad.priority}</td>
+            <td>${ad.impressions}</td>
+            <td><button class="delete"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        `;
+    }).join('');
+    tbody.innerHTML = html;
+  }
 
 // Event: display books
 document.addEventListener('DOMContentLoaded', UI.displayAds);
+
+const searchInput = document.getElementById('search');
+searchInput.addEventListener('keyup', displayMatches);
+
 const storedAds = [
     {
         name: 'Shure SE110 in-ear headphones',
