@@ -15,7 +15,6 @@ body {
 }
 .container {
     max-width: 90%;
-    min-width: 570px;
     min-height: 90%;
     display: flex;
     flex-direction: column;
@@ -27,7 +26,7 @@ body {
 }
 header {
     width: 100%;
-    height: 60px;
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,6 +44,7 @@ ul li {
     margin: 0 10px;
     padding: 15px;
     border-radius: 5px;
+    cursor: pointer;
 }
 ul li:hover {
     background-color: #3ABEE6;
@@ -52,7 +52,7 @@ ul li:hover {
 }
 .search {
     min-height: 200px;
-    min-height: 375px;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,23 +67,44 @@ ul li:hover {
     width: 80%;
 }
 .content .search-inputs {
-    width: 100%;
+    width: 80%;
     display: flex;
+    justify-content: center;
 }
-input {
-    display: block;
-    height: 40px;
-    border: none;
-    flex: 4;
+.input-container {
+    flex: 3;
+    position: relative;
 }
-input[type='button'] {
-    flex: 1;
-    background-color: orange;
+.input-container i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.7;
+}
+.input-container input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #fff;
+    padding: 10px 5px 10px 30px;
+}
+.search-inputs .input-container:first-of-type input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+input[type='button'] { 
+    background-color: rgb(255, 165, 0);
     border: none;
+    outline: none;
+    cursor: pointer;
     color: white;
+    flex: 1; 
+}
+input[type='button']:hover {
+    background-color: rgba(255, 165, 0, 0.9);
 }
 .featured-holidays {
-    min-height: 150px;
+    min-height: 25vh;
     display: flex;
     justify-content: center;
     background-color: #fff;
@@ -107,4 +128,53 @@ input[type='button'] {
 .holiday span {
     display: block;
     margin: 10px 0;
+}
+@media(max-width: 625px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    header {
+        background-color: transparent;
+        flex: 1;
+    }
+    ul {
+        flex-direction: column;
+        margin:  5px auto;
+        text-align: center;
+        padding: 0;
+    }
+    ul li {
+        display: block;
+        color: white;
+    }
+    ul li:hover {
+        color: #1E929E;
+        font-weight: 600;
+        background-color: white;
+    }
+    .search {
+        flex: 1;
+    }
+    .content {
+        justify-content: center;
+        width: 90%;
+        text-align: center;
+    }
+    .content .search-inputs {
+        margin-top: 40px;
+        flex-direction: column;
+        width: 100%;
+    }
+    .search-inputs .input-container:first-of-type input {
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0;
+    }
+    .featured-holidays {
+       display: none;
+    }
+    input[type='button'] {
+        padding: 10px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
 }
