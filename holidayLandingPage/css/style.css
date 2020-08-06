@@ -14,7 +14,8 @@ body {
     font-weight: 400;
 }
 .container {
-    max-width: 90%;
+    width: 90%;
+    max-width: 1000px;
     min-height: 90%;
     display: flex;
     flex-direction: column;
@@ -33,7 +34,6 @@ header {
     background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    
 }
 ul {
     padding: 0 20px 0 0;
@@ -43,6 +43,7 @@ ul li {
     display: inline;
     margin: 0 10px;
     padding: 15px;
+    font-size: 0.9rem;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -52,7 +53,7 @@ ul li:hover {
 }
 .search {
     min-height: 200px;
-    height: 50vh;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,28 +87,30 @@ ul li:hover {
     width: 100%;
     outline: none;
     border: 1px solid #fff;
-    padding: 10px 5px 10px 30px;
+    padding: 15px 5px 10px 30px;
+    font-size: 0.7rem;
 }
 .search-inputs .input-container:first-of-type input {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 input[type='button'] { 
-    background-color: rgb(255, 165, 0);
+    background-color: #EB8E5C;
     border: none;
     outline: none;
     cursor: pointer;
     color: white;
-    flex: 1; 
+    flex: 1;
+    font-size: 0.7rem; 
 }
 input[type='button']:hover {
     background-color: rgba(255, 165, 0, 0.9);
 }
 .featured-holidays {
-    min-height: 25vh;
+    min-height: 20vh;
     display: flex;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, .5);
     width: 95%;
     margin: 5px auto;
     border-radius: 5px;
@@ -128,6 +131,7 @@ input[type='button']:hover {
 .holiday span {
     display: block;
     margin: 10px 0;
+    font-size: 0.8rem;
 }
 @media(max-width: 625px) {
     .container {
