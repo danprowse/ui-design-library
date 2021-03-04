@@ -9,11 +9,12 @@
   cursor: pointer;
   top: 25px;
   left: 25px;
-  width: 40px;
-  height: 40px;
-  border-radius: 5%;
-  background-color: pink;
-  border: 2px solid pink;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #FBFAF5;
+  /* border: 2px solid #333; */
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +22,8 @@
   transition: all .5s ease;
 }
 .mobile-nav-btn:hover {
-  background-color: darken(pink, 5%);
-  border-color: darken(pink, 5%);
+  background-color: #ddd;
+  /* border-color: #222; */
 }
 .mobile-nav-btn.open {
   background-color: #333;
@@ -30,47 +31,61 @@
 .mobile-nav-btn.open  .menu-btn_burger.middle {
   transform: translateX(50px);
   background: transparent;
-  background-color: pink;
+  background-color: #FBFAF5;
   box-shadow: none;
 }
 .mobile-nav-btn.open .menu-btn_burger.top {
   transform: rotate(45deg) translateY(3.5px) translateX(3.5px);
-  background-color: pink;
+  background-color: #FBFAF5;
 }
 .mobile-nav-btn.open .menu-btn_burger.bottom {
   transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
-  background-color: pink;
+  background-color: #FBFAF5;
 }
 .menu-btn_burger {
   width: 25px;
   position: relative;
-  height: 1.25px;
+  height: 2px;
   margin: 1.75px 0;
-  background-color: yellow;
+  background-color: #333;
   transition: all .5s ease-in-out;
 }
 .menu-btn_burger.top,
 .menu-btn_burger.bottom {
-  height: 1.75px;
+  height: 2px;
 }
 .mobile-slider-nav {
   position: fixed;
-  top: -110px;
+  left: -225px;
+  top: 0;
+  bottom: 0;
   z-index: 3;
   transition: all .5s ease;
-  width: 100%;
-  background-color: red;
+  width: 200px;
+  background-color: #FBFAF5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .mobile-slider-nav.open {
-  top: 0;
+  left: 0;
 }
 .mobile-slider-nav a {
   display: block;
   text-align: center;
-  margin: 0.5rem 0;
+  padding: 1rem 0.5rem;
   font-weight: bold;
-
+  text-decoration: none;
+  color: #333;
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  font-size: 0.9rem;
+  transition: all .1s ease-out;
 }
 .mobile-slider-nav a:hover {
-  color: pink;
+  color: #000;
+  border-left: 5px solid cadetblue;
 }
