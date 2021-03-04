@@ -1,0 +1,76 @@
+.active {
+  color: pink;
+}
+
+.mobile-nav-btn {
+  position: fixed;
+  z-index: 5;
+  overflow: hidden;
+  cursor: pointer;
+  top: 25px;
+  left: 25px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5%;
+  background-color: pink;
+  border: 2px solid pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all .5s ease;
+}
+.mobile-nav-btn:hover {
+  background-color: darken(pink, 5%);
+  border-color: darken(pink, 5%);
+}
+.mobile-nav-btn.open {
+  background-color: #333;
+}
+.mobile-nav-btn.open  .menu-btn_burger.middle {
+  transform: translateX(50px);
+  background: transparent;
+  background-color: pink;
+  box-shadow: none;
+}
+.mobile-nav-btn.open .menu-btn_burger.top {
+  transform: rotate(45deg) translateY(3.5px) translateX(3.5px);
+  background-color: pink;
+}
+.mobile-nav-btn.open .menu-btn_burger.bottom {
+  transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
+  background-color: pink;
+}
+.menu-btn_burger {
+  width: 25px;
+  position: relative;
+  height: 1.25px;
+  margin: 1.75px 0;
+  background-color: yellow;
+  transition: all .5s ease-in-out;
+}
+.menu-btn_burger.top,
+.menu-btn_burger.bottom {
+  height: 1.75px;
+}
+.mobile-slider-nav {
+  position: fixed;
+  top: -110px;
+  z-index: 3;
+  transition: all .5s ease;
+  width: 100%;
+  background-color: red;
+}
+.mobile-slider-nav.open {
+  top: 0;
+}
+.mobile-slider-nav a {
+  display: block;
+  text-align: center;
+  margin: 0.5rem 0;
+  font-weight: bold;
+
+}
+.mobile-slider-nav a:hover {
+  color: pink;
+}
