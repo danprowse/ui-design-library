@@ -1,7 +1,7 @@
 # UI Design Library
 
 View the live version at: 
-> 
+> https://friendly-mccarthy-c9ee38.netlify.app/index.html
 
  A collection of designs from uidesigndaily.com that have been recreated and modified using HTML, CSS and JS for the purpose of improving my CSS skills and creating web pages following a design brief.
 ## Developing
