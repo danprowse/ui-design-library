@@ -3,6 +3,7 @@
 View the live version at: 
 > 
 
+ A collection of designs from uidesigndaily.com that have been recreated and modified using HTML, CSS and JS for the purpose of improving my CSS skills and creating web pages following a design brief.
 ## Developing
 If you wish to grab a copy of this repository, navigate to where you would like the copy of the repo to be within your terminal and follow the steps below:
 
