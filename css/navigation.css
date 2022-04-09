@@ -5,12 +5,14 @@
   cursor: pointer;
   top: 25px;
   left: 25px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background-color: #fbfaf5;
-  /* border: 2px solid #333; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +20,7 @@
   transition: all 0.5s ease;
 }
 .mobile-nav-btn:hover {
-  background-color: #ddd;
+  background-color: rgba(255, 255, 255, 0.1);
   /* border-color: #222; */
 }
 .mobile-nav-btn.open {
@@ -27,28 +29,28 @@
 .mobile-nav-btn.open .menu-btn_burger.middle {
   transform: translateX(50px);
   background: transparent;
-  background-color: #fbfaf5;
   box-shadow: none;
 }
 .mobile-nav-btn.open .menu-btn_burger.top {
-  transform: rotate(45deg) translateY(3.5px) translateX(3.5px);
-  background-color: #fbfaf5;
+  transform: rotate(45deg) translateY(5px) translateX(5px);
+
 }
 .mobile-nav-btn.open .menu-btn_burger.bottom {
-  transform: rotate(-45deg) translateY(-3.5px) translateX(3.5px);
-  background-color: #fbfaf5;
+  transform: rotate(-45deg) translateY(-5px) translateX(5px);
+
 }
 .menu-btn_burger {
   width: 25px;
   position: relative;
-  height: 2px;
+  height: 4px;
   margin: 1.75px 0;
-  background-color: #333;
+  border: 0.5px solid rgba(255, 255, 255, 0.75);
+  background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
 .menu-btn_burger.top,
 .menu-btn_burger.bottom {
-  height: 2px;
+  height: 4px;
 }
 .mobile-slider-nav {
   position: fixed;
@@ -57,7 +59,7 @@
   bottom: 0;
   z-index: 3;
   transition: all 0.5s ease;
-  width: 200px;
+  width: 225px;
   background-color: #fbfaf5;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
